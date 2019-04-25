@@ -1,0 +1,86 @@
+#include <iostream>
+#include <string>
+#include <conio.h>
+#include <iomanip>
+
+
+using namespace std;
+
+int main()
+{
+    int Month, Day, Year;
+    string MonthOne, MonthTwo, MonthThree, MonthFour, MonthFive, MonthSix, MonthSeven, MonthEight, MonthNine, MonthTen, MonthEleven, MonthTwelve;
+    
+    MonthOne = "January";
+    MonthTwo = "February";
+    MonthThree = "March";
+    MonthFour = "April";
+    MonthFive = "May";
+    MonthSix = "June";
+    MonthSeven = "July";
+    MonthEight = "August";
+    MonthNine = "September";
+    MonthTen = "October";
+    MonthEleven = "November";
+    MonthTwelve = "December";
+
+    cout << "Instructions:Enter IMPORTANT numbers only" << endl;
+    cout << "Example: Put 1 not 01" << endl;
+    cout << ' ' << endl;
+    cout << ' ' << endl;
+    cout << "Enter Year:"; cin >> Year;
+    cout << "Enter Month:"; cin >> Month;
+    cout << "Enter Day:"; cin >> Day;
+    
+    if(Year>2019)
+       cout << "Invalid date!" << endl;
+    else if(Month>12)
+        cout << "Invalid date!" << endl;
+    else if(Day>31)
+        cout << "Invalid date!" << endl;
+    else
+        switch(Month)
+        {   case 1:
+                cout << MonthOne << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 2:
+            {
+                if (Day>28)
+                    cout << "Invalid date!" << endl;
+            else
+                cout << MonthTwo << ' ' << Day << ',' << ' ' << Year;}
+                break;
+            case 3:
+                cout << MonthThree << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 4:
+                cout << MonthFour << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 5:
+                cout << MonthFive << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 6:
+                cout << MonthSix << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 7:
+                cout << MonthSeven << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 8:
+                cout << MonthEight << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 9:
+                cout << MonthNine << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 10:
+                cout << MonthTen << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 11:
+                cout <<  MonthEleven << ' ' << Day << ',' << ' ' << Year;
+                break;
+            case 12:
+                cout << MonthTwelve << ' ' << Day << ',' << ' ' << Year;
+                break;
+        }
+    cout << ' ' << endl;
+    return 0;
+}
